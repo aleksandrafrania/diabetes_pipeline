@@ -59,18 +59,4 @@ The pipeline will load the dataset, perform data exploration, clean the data, tr
 
 The pipeline will output the following information:
 
-- Initial data exploration summary
-- Cleaned data preview
-- Cross-validation scores
-- Model accuracy
-- Confusion matrix
-- Classification report
-- Predictions
-
-## Dependencies
-
-The project requires the following Python packages, specified in `requirements.txt`:
-
-```plaintext
-pandas==2.2.3
-scikit-learn==1.5.2
+- Initial data exploration summ
