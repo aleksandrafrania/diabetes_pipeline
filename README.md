@@ -48,6 +48,7 @@ The pipeline will load the dataset, perform data exploration, clean the data, tr
 2. **Data Cleaning**:
     - Rename columns using `rename_columns()`.
     - Replace zero values with median values using `replace_zeros_with_median()`.
+    - Scale features using `scale_features()`.
 
 3. **Model Training and Evaluation**:
     - Train the model using `train_model()`.

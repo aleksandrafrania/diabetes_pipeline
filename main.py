@@ -14,16 +14,4 @@ def main():
     df = replace_zeros_with_median(df)
     df = scale_features(df)
 
-    print("\nCleaned and Scaled data:")
-    print(df.head())
     
-    model, X_test, y_test = train_model(df)
-    
-    predictions = predict(model, df.drop(columns=['diabetes_class']))
-    print("\nPredictions:")
-    print(predictions.head())
-    
-    evaluate_model(model, X_test, y_test)
-
-if __name__ == "__main__":
-    main()
