@@ -46,13 +46,3 @@ def check_duplicates(df):
     """
     duplicates = df.duplicated().sum()
     print("\nNumber of duplicate rows:", duplicates)
-
-
-if __name__ == "__main__":
-    # Example usage
-    df = load_dataset()
-    print("Initial data exploration:\n")
-    
-    summarize_data(df)
-    check_missing_values(df)
-    check_duplicates(df)
