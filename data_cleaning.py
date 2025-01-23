@@ -1,4 +1,6 @@
 import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
+pd.set_option('display.max_columns', None)
 
 def rename_columns(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -49,5 +51,31 @@ def replace_zeros_with_median(df: pd.DataFrame) -> pd.DataFrame:
     for column in columns_to_replace:
         median_value = df[df[column] != 0][column].median()
         df[column] = df[column].replace(0, median_value)
+    
+    return df
+
+
+def scale_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Scales specified columns using MinMaxScaler to improve model performance.
+    
+    Parameters:
+    df (pd.DataFrame): The input dataframe to scale features.
+    
+    Returns:
+    pd.DataFrame: The dataframe with scaled features.
+    """
+    columns_to_scale = [
+        'plasma_glucose', 
+        'blood_pressure', 
+        'triceps_skin_fold_thickness', 
+        'serum_insulin', 
+        'bmi', 
+        'diabetes_pedigree_function', 
+        'age'
+    ]
+    
+    scaler = MinMaxScaler()
+    df[columns_to_scale] = scaler.fit_transform(df[columns_to_scale])
     
     return df

@@ -1,5 +1,5 @@
 from data_exploration import load_dataset, summarize_data, check_missing_values, check_duplicates
-from data_cleaning import rename_columns, replace_zeros_with_median
+from data_cleaning import rename_columns, replace_zeros_with_median, scale_features
 from prediction_model import train_model, predict, evaluate_model
 
 def main():
@@ -12,8 +12,9 @@ def main():
     
     df = rename_columns(df)
     df = replace_zeros_with_median(df)
+    df = scale_features(df)
 
-    print("\nCleaned data:")
+    print("\nCleaned and Scaled data:")
     print(df.head())
     
     model, X_test, y_test = train_model(df)

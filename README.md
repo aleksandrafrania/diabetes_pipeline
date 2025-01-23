@@ -1,6 +1,6 @@
 # Diabetes Pipeline
 
-This project is a reproducible pipeline for predicting diabetes using a RandomForest model. The pipeline includes data exploration, data cleaning, model training, and evaluation.
+This project is a reproducible pipeline for predicting the onset of diabetes within 5 years in Pima Indians given medical details. The pipeline includes data exploration, data cleaning, model training, and evaluation. The dataset used in this project comes from [this source](https://github.com/ashishpatel26/Pima-Indians-Diabetes-Dataset-Missing-Value-Imputation/blob/master/pima-indians-diabetes.data.csv).
 
 ## Requirements
 
