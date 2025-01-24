@@ -84,4 +84,31 @@ The pipeline will load the dataset, perform data exploration, clean the data, tr
     - Check for duplicate rows using `check_duplicates()`.
 
 2. **Data Cleaning**:
-    - Rename columns using `rename_c
+    - Rename columns using `rename_columns()`.
+    - Replace zero values with median values using `replace_zeros_with_median()`.
+    - Scale features using `scale_features()`.
+
+3. **Model Training and Evaluation**:
+    - Train the model using `train_model()`.
+    - Predict the labels using `predict()`.
+    - Evaluate the model using `evaluate_model()`.
+
+## Example Output
+
+The pipeline will output the following information:
+
+- Initial data exploration summary
+- Cleaned data preview
+- Cross-validation scores
+- Model accuracy
+- Confusion matrix
+- Classification report
+- Predictions
+
+## Dependencies
+
+The project requires the following Python packages, specified in `requirements.txt`:
+
+```plaintext
+pandas==2.2.3
+scikit-learn==1.5.2
