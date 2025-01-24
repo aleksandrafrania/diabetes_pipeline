@@ -4,9 +4,13 @@ This project is a reproducible pipeline for predicting the onset of diabetes wit
 
 ## Requirements
 
-- Docker
+- Docker (optional)
+- Python 3.9+
+- pip
 
 ## Setup
+
+### Using Docker
 
 1. **Clone the repository**:
     ```sh
@@ -24,11 +28,45 @@ This project is a reproducible pipeline for predicting the onset of diabetes wit
     docker run -it --rm diabetes_pipeline
     ```
 
+### Without Docker
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/aleksandrafrania/diabetes_pipeline.git
+    cd diabetes_pipeline
+    ```
+
+2. **Create a virtual environment**:
+    ```sh
+    python -m venv venv
+    ```
+
+3. **Activate the virtual environment**:
+    - On Windows:
+        ```sh
+        venv\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```sh
+        source venv/bin/activate
+        ```
+
+4. **Install the dependencies**:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+5. **Run the main script**:
+    ```sh
+    python main.py
+    ```
+
 ## Project Structure
 
-- `data_exploration.py`: Functions for data exploration.
-- `data_cleaning.py`: Functions for data cleaning.
-- `prediction_model.py`: Functions for model training and evaluation.
+- `utils/`: Folder containing utility functions.
+  - `data_exploration.py`: Functions for data exploration.
+  - `data_cleaning.py`: Functions for data cleaning.
+  - `prediction_model.py`: Functions for model training and evaluation.
 - `main.py`: Main script to run the pipeline.
 - `requirements.txt`: Python dependencies.
 - `Dockerfile`: Docker configuration.
@@ -46,17 +84,4 @@ The pipeline will load the dataset, perform data exploration, clean the data, tr
     - Check for duplicate rows using `check_duplicates()`.
 
 2. **Data Cleaning**:
-    - Rename columns using `rename_columns()`.
-    - Replace zero values with median values using `replace_zeros_with_median()`.
-    - Scale features using `scale_features()`.
-
-3. **Model Training and Evaluation**:
-    - Train the model using `train_model()`.
-    - Predict the labels using `predict()`.
-    - Evaluate the model using `evaluate_model()`.
-
-## Example Output
-
-The pipeline will output the following information:
-
-- Initial data exploration summ
+    - Rename columns using `rename_c

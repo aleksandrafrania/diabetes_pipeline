@@ -1,6 +1,6 @@
-from data_exploration import load_dataset, summarize_data, check_missing_values, check_duplicates
-from data_cleaning import rename_columns, replace_zeros_with_median, scale_features
-from prediction_model import train_model, predict, evaluate_model
+from utils.data_exploration import load_dataset, summarize_data, check_missing_values, check_duplicates
+from utils.data_cleaning import rename_columns, replace_zeros_with_median, scale_features
+from utils.prediction_model import train_model, predict, evaluate_model
 
 def main():
     df = load_dataset()
@@ -25,5 +25,4 @@ def main():
     
     evaluate_model(model, X_test, y_test)
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__m
